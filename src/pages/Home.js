@@ -63,7 +63,7 @@ function Home() {
   return (
     <div style={styles.pageContent}>
       <div style={styles.contentContainer}>
-        <h1 style={{ ...styles.welcomeText, opacity: showWelcomeText ? 1 : 0, transform: showWelcomeText ? 'scale(1)' : 'scale(0.9)' }}>Welcome Back</h1>
+        <h1 style={{ ...styles.welcomeText, opacity: showWelcomeText ? 1 : 0, transform: showWelcomeText ? 'scale(1)' : 'scale(0.9)' }}>Water Quality Monitoring</h1>
         <p style={styles.infoText}>
           We're here to help you make a difference. Whether it's reporting a leak or learning how to conserve water, our platform is designed to empower you to take action.
         </p>
