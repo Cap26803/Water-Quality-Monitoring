@@ -5,6 +5,7 @@ import Admin from "./pages/Admin"
 import Complaint from "./pages/Complaint"
 import Home from "./pages/Home"
 import Login from "./pages/Login"
+import Register from "./pages/Register"
 import StayAware from "./pages/StayAware"
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/Admin" element={<Admin />} />
           <Route path="/about" element={<About />} />
+          <Route path="/Register" element={<Register/>}/> 
         </Routes>
       </div>
     </>

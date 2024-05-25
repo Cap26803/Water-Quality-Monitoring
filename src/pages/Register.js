@@ -4,14 +4,15 @@ import { Link } from 'react-router-dom';
 const styles = {
     container: {
         maxWidth: '500px',
-        margin: '100px auto', // Add margin from top
+        margin: '0 auto',
         padding: '20px',
         backgroundColor: '#f0f0f0',
         borderRadius: '8px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+        marginTop: '50px',
     },
     formGroup: {
-        marginBottom: '25px',
+        marginBottom: '20px',
     },
     label: {
         display: 'block',
@@ -36,18 +37,26 @@ const styles = {
         backgroundColor: '#007bff',
         color: '#fff',
         cursor: 'pointer',
+        marginTop: '10px',
     },
-    registerButton: {
-        marginTop: '20px', // Add margin from top
-        backgroundColor: '#28a745', // Green color for register button
+    link: {
+        display: 'block',
+        textAlign: 'center',
+        marginTop: '20px',
+        textDecoration: 'none',
+        color: '#007bff',
+        fontSize: '16px',
     },
 };
 
-function Login() {
+function Register() {
     const [formData, setFormData] = useState({
+        name: '',
         email: '',
         password: '',
     });
+
+    const [formError, setFormError] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -59,14 +68,37 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle login submission
+        // Basic form validation
+        if (!formData.name || !formData.email || !formData.password) {
+            setFormError('Please fill out all fields.');
+            return;
+        }
+        // Handle form submission
         console.log(formData);
+        // Reset form and clear error message
+        setFormData({
+            name: '',
+            email: '',
+            password: '',
+        });
+        setFormError('Registration successful!');
     };
 
     return (
         <div style={styles.container}>
-            <h1>Login</h1>
+            <h1>Register</h1>
             <form onSubmit={handleSubmit}>
+                <div style={styles.formGroup}>
+                    <label style={styles.label}>Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        style={styles.input}
+                        required
+                    />
+                </div>
                 <div style={styles.formGroup}>
                     <label style={styles.label}>Email</label>
                     <input
@@ -89,11 +121,12 @@ function Login() {
                         required
                     />
                 </div>
-                <button type="submit" style={styles.button}>Login</button>
+                {formError && <p style={{ color: 'red' }}>{formError}</p>}
+                <button type="submit" style={styles.button}>Register</button>
             </form>
-            <Link to="/Register" style={styles.link}>Don't have an account? Register here</Link>
+            <Link to="/login" style={styles.link}>Already have an account? Login here</Link>
         </div>
     );
 }
 
-export default Login;
+export default Register;
