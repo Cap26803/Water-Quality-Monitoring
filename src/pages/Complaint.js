@@ -1,9 +1,10 @@
+import axios from 'axios'; // Import Axios for making HTTP requests
 import React, { useState } from 'react';
 
 const styles = {
   container: {
     maxWidth: '500px',
-    margin: '50px auto 0', // Added margin from the top
+    margin: '50px auto 0',
     padding: '20px',
     backgroundColor: '#f0f0f0',
     borderRadius: '8px',
@@ -44,7 +45,8 @@ function Complaint() {
     address: '',
     zone: '',
     complaintType: '',
-    photo: null,
+    phoneNumber: '',
+    emailAddress: '',
   });
 
   const [formError, setFormError] = useState('');
@@ -57,36 +59,44 @@ function Complaint() {
     });
   };
 
-  const handleFileChange = (e) => {
-    setFormData({
-      ...formData,
-      photo: e.target.files[0],
-    });
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setFormError('');
+    
     // Basic form validation
-    if (!formData.name || !formData.address || !formData.zone || !formData.complaintType || !formData.photo) {
-      setFormError('Please fill out all fields and attach a photo.');
+    if (!formData.name || !formData.address || !formData.zone || !formData.complaintType) {
+      setFormError('Please fill out all fields.');
       return;
     }
-    // Handle form submission
-    console.log(formData);
-    // Reset form and clear error message
-    setFormData({
-      name: '',
-      address: '',
-      zone: '',
-      complaintType: '',
-      photo: null,
-    });
-    setFormError('Complaint submitted successfully!');
-  };
+    
+    try {
+      // Log the form data to ensure it's correctly populated
+      console.log('Submitting form data:', formData);
+    
+      // Make POST request to backend
+      const response = await axios.post('http://localhost:8081/api/complaints/add', formData);
+    
+      console.log('Response:', response.data);
+    
+      // Reset form after successful submission
+      setFormData({
+        name: '',
+        address: '',
+        zone: '',
+        complaintType: '',
+        phoneNumber: '',
+        emailAddress: '',
+      });
+      setFormError('Complaint submitted successfully!');
+    } catch (error) {
+      console.error('Error submitting complaint:', error.message);
+      setFormError('Error submitting complaint. Please try again.');
+    }
+  };  
 
   return (
     <div style={styles.container}>
-      <h1>Submit a Complaint</h1> {/* Updated title */}
+      <h1>Submit a Complaint</h1>
       <form onSubmit={handleSubmit}>
         <div style={styles.formGroup}>
           <label style={styles.label}>Full Name</label>
@@ -122,8 +132,6 @@ function Complaint() {
             <option value="">Select Zone</option>
             <option value="North">North</option>
             <option value="South">South</option>
-            <option value="East">East</option>
-            <option value="West">West</option>
           </select>
         </div>
         <div style={styles.formGroup}>
@@ -142,12 +150,23 @@ function Complaint() {
           </select>
         </div>
         <div style={styles.formGroup}>
-          <label style={styles.label}>Attach Photo</label>
+          <label style={styles.label}>Phone Number</label>
           <input
-            type="file"
-            name="photo"
-            accept="image/*"
-            onChange={handleFileChange}
+            type="text"
+            name="phoneNumber"
+            value={formData.phoneNumber}
+            onChange={handleChange}
+            style={styles.input}
+            required
+          />
+        </div>
+        <div style={styles.formGroup}>
+          <label style={styles.label}>Email Address</label>
+          <input
+            type="email"
+            name="emailAddress"
+            value={formData.emailAddress}
+            onChange={handleChange}
             style={styles.input}
             required
           />
