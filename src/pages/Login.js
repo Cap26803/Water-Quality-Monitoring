@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 
 const styles = {
     container: {
@@ -37,9 +37,9 @@ const styles = {
         color: '#fff',
         cursor: 'pointer',
     },
-    registerButton: {
-        marginTop: '20px', // Add margin from top
-        backgroundColor: '#28a745', // Green color for register button
+    errorMessage: {
+        color: 'red',
+        marginTop: '10px',
     },
 };
 
@@ -48,6 +48,8 @@ function Login() {
         email: '',
         password: '',
     });
+    const [error, setError] = useState('');
+    const navigate = useNavigate(); // Initialize useNavigate
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -59,8 +61,12 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle login submission
-        console.log(formData);
+        // Check if the entered username and password match the required values
+        if (formData.email === 'admin' && formData.password === 'admin123') {
+            navigate('/Admin'); // Redirect to /Admin route on successful login
+        } else {
+            setError('Invalid username or password');
+        }
     };
 
     return (
@@ -68,9 +74,9 @@ function Login() {
             <h1>Login</h1>
             <form onSubmit={handleSubmit}>
                 <div style={styles.formGroup}>
-                    <label style={styles.label}>Email</label>
+                    <label style={styles.label}>Username</label>
                     <input
-                        type="email"
+                        type="text"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
@@ -90,8 +96,8 @@ function Login() {
                     />
                 </div>
                 <button type="submit" style={styles.button}>Login</button>
+                {error && <p style={styles.errorMessage}>{error}</p>}
             </form>
-            <Link to="/Register" style={styles.link}>Don't have an account? Register here</Link>
         </div>
     );
 }

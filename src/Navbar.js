@@ -55,13 +55,13 @@ export default function Navbar() {
           </NavLink>
         </li>
         <li style={styles.listItem}>
-          <NavLink to="/Login" style={styles.link} activeStyle={styles.activeLink}>
-            Login
+          <NavLink to="/About" style={styles.link} activeStyle={styles.activeLink}>
+            About
           </NavLink>
         </li>
         <li style={styles.listItem}>
-          <NavLink to="/About" style={styles.link} activeStyle={styles.activeLink}>
-            About
+          <NavLink to="/Login" style={styles.link} activeStyle={styles.activeLink}>
+            Admin
           </NavLink>
         </li>
       </ul>
