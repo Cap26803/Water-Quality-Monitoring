@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import axios from 'axios'; // Import Axios for making HTTP requests
+import React, { useEffect, useState } from 'react';
 
 const styles = {
     container: {
@@ -40,10 +41,29 @@ const styles = {
         marginTop: '10px',
         textAlign: 'center',
     },
+    complaintType: {
+        fontWeight: 'bold',
+        marginBottom: '10px',
+    },
 };
 
 function Admin() {
+    const [complaints, setComplaints] = useState([]);
     const [acknowledgements, setAcknowledgements] = useState({});
+
+    useEffect(() => {
+        // Fetch complaints from the backend
+        const fetchComplaints = async () => {
+            try {
+                const response = await axios.get('http://localhost:8081/api/complaints/getAll');
+                setComplaints(response.data);
+            } catch (error) {
+                console.error('Error fetching complaints:', error);
+            }
+        };
+
+        fetchComplaints();
+    }, []);
 
     const handleAccept = (id) => {
         // Handle accept action
@@ -63,18 +83,17 @@ function Admin() {
         console.log(`Complaint with ID ${id} rejected`);
     };
 
-    const complaints = [
-        { id: 1, text: 'Complaint 1' },
-        { id: 2, text: 'Complaint 2' },
-        { id: 3, text: 'Complaint 3' },
-    ];
-
     return (
         <div style={styles.container}>
             <h2>Complaint Dashboard</h2>
             {complaints.map((complaint) => (
                 <div key={complaint.id} style={styles.complaintItem}>
-                    <p>{complaint.text}</p>
+                    <p style={styles.complaintType}>{complaint.complaintType}</p>
+                    <p>Name: {complaint.name}</p>
+                    <p>Address: {complaint.address}</p>
+                    <p>Zone: {complaint.zone}</p>
+                    <p>Phone Number: {complaint.phoneNumber}</p>
+                    <p>Email Address: {complaint.emailAddress}</p>
                     <div style={styles.buttonContainer}>
                         <button
                             style={{ ...styles.button, ...styles.acceptButton }}
