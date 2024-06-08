@@ -71,7 +71,7 @@ function Login() {
 
     return (
         <div style={styles.container}>
-            <h1>Login</h1>
+            <h1>Administrator Login</h1>
             <form onSubmit={handleSubmit}>
                 <div style={styles.formGroup}>
                     <label style={styles.label}>Username</label>
@@ -95,7 +95,7 @@ function Login() {
                         required
                     />
                 </div>
-                <button type="submit" style={styles.button}>Login</button>
+                <button type="submit" style={styles.button}>Click here to Login</button>
                 {error && <p style={styles.errorMessage}>{error}</p>}
             </form>
         </div>
