@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Water Quality Monitoring (WQM)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The Water Quality Monitoring (WQM) platform is designed to raise awareness about the importance of clean water and promote sustainable practices for managing water resources. Our mission is to ensure that everyone has access to safe and clean drinking water, as well as proper sanitation facilities. This project aligns with Sustainable Development Goal 6 (SDG 6), which aims to ensure availability and sustainable management of water and sanitation for all.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Information on water quality and common water pollutants
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Methods to protect water resources
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Complaint submission and management system
 
-### `npm test`
+- Dashboard for administrators to manage and respond to complaints
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Visualization of complaint statuses with a pie chart
 
-### `npm run build`
+## SDG 6 Alignment
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The WQM platform supports Sustainable Development Goal 6 (SDG 6) by providing tools and resources to improve water quality and promote sustainable water monitoring practices. Through our complaint management system, we address water quality issues promptly, contributing to the goal of ensuring availability and sustainable management of water and sanitation for all.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Setup Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- Node.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- npm (Node Package Manager)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1\. Clone the repository:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```sh
 
-## Learn More
+   git clone https://github.com/Cap26803/Water-Quality-Monitoring.git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   cd wqm-platform
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```
 
-### Code Splitting
+2\. Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```sh
 
-### Analyzing the Bundle Size
+   npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```
 
-### Making a Progressive Web App
+### Running the Project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1\. Start the development server:
 
-### Advanced Configuration
+   ```sh
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   npm start
 
-### Deployment
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2\. Open your browser and navigate to:
 
-### `npm run build` fails to minify
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   http://localhost:3000
+
+   ```
+
+### Backend Setup
+
+The backend is required to manage the complaints. Ensure you have the backend server running on `http://localhost:8081`.
+
+
+## Contribution Guidelines
+
+We welcome contributions from the community. If you have suggestions or bug reports, please create an issue or submit a pull request.
+
+### Steps to Contribute
+
+1\. Fork the repository
+
+2\. Create a new branch (`git checkout -b feature-branch`)
+
+3\. Make your changes
+
+4\. Commit your changes (`git commit -m 'Add some feature'`)
+
+5\. Push to the branch (`git push origin feature-branch`)
+
+6\. Open a pull request
+
+Thank you for supporting the Water Quality Monitoring platform and our mission to promote clean water and sustainable development!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
