@@ -18,7 +18,7 @@ const styles = {
     color: '#fff', // Dark text color for contrast
     maxWidth: '600px',
     padding: '40px', // Increased padding for better spacing
-    background: 'rgba(0, 0, 0, 0.85)', // White background with 90% opacity
+    background: 'rgba(0, 0, 0, 0.9)', // White background with 90% opacity
     borderRadius: '12px', // Slightly rounded corners for modern feel
     //boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)', // Subtle shadow for depth
     transform: 'translateY(20px)', // Initial state for animation
