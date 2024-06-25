@@ -12,11 +12,12 @@ This project aims to develop a Complaint Management System to streamline the pro
 The WQM platform supports Sustainable Development Goal 6 (SDG 6) by providing tools and resources to improve water quality and promote sustainable water monitoring practices. Through our complaint management system, we address water quality issues promptly, contributing to the goal of ensuring availability and sustainable management of water and sanitation for all.
 
 ### SDG Goal 6:
+
 ![SDG 6](https://github.com/Cap26803/Water-Quality-Monitoring/assets/106472393/532d36d6-e216-4515-bd12-5fa18fcb29fe)
 
-#### Ensure availability and sustainable management of water and sanitation for all.
-• Target 6.1: By 2030, achieve universal and equitable access to safe and affordable drinking water for all.
-• Indicator 6.1.1: Proportion of population using safely managed drinking water services.
+### Ensure availability and sustainable management of water and sanitation for all.
+- **Target 6.1:** By 2030, achieve universal and equitable access to safe and affordable drinking water for all.
+- **Indicator 6.1.1:** Proportion of population using safely managed drinking water services.
 
 ## System Thinking
 
