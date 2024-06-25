@@ -36,53 +36,44 @@ We applied systems thinking to analyze the intricate interactions involved in wa
 
 ## Implementation Details
 
-- Implementation Platform
+### Implementation Platform
 
--- Frontend: React.js is used for building the user interface of the platform. It provides a component-based architecture that enhances the development of interactive and dynamic web applications.
+- **Frontend:** 
+  - **React.js** is used for building the user interface of the platform. It provides a component-based architecture that enhances the development of interactive and dynamic web applications.
 
--- Backend: Spring Boot is used for creating the backend services. It simplifies the development of production-ready applications with its embedded server and wide range of libraries.
+- **Backend:** 
+  - **Spring Boot** is used for creating the backend services. It simplifies the development of production-ready applications with its embedded server and wide range of libraries.
 
--- Database: MySQL is utilized for managing and storing data. It is a reliable relational database management system that ensures data integrity and supports complex queries.
+- **Database:** 
+  - **MySQL** is utilized for managing and storing data. It is a reliable relational database management system that ensures data integrity and supports complex queries.
 
-- Programming Languages
+### Programming Languages
 
--- JavaScript: Used for developing the frontend application with React.js.
+- **JavaScript:** 
+  - Used for developing the frontend application with React.js.
 
--- Java: Employed for developing the backend services using Spring Boot.
+- **Java:** 
+  - Employed for developing the backend services using Spring Boot.
 
--- SQL: Used for querying and managing data in MySQL.
+- **SQL:** 
+  - Used for querying and managing data in MySQL.
 
-- Packages and Libraries
+### Packages and Libraries
 
--- Frontend:
+#### Frontend
 
-∗ React.js: A JavaScript library for building user interfaces
-∗ Axios: A promise-based HTTP client for making HTTP requests.
+- **React.js:** A JavaScript library for building user interfaces.
+- **Axios:** A promise-based HTTP client for making HTTP requests.
+- **@fortawesome/fontawesome-free:** A library for incorporating Font Awesome icons.
+- **Chart.js:** A library for creating responsive charts and graphs.
+- **react-chartjs-2:** A React wrapper for Chart.js to create charts in React components.
 
-∗ @fortawesome/fontawesome-free: A library for incorporating
+#### Backend
 
-Font Awesome icons.
-
-∗ Chart.js: A library for creating responsive charts and graphs.
-
-∗ react-chartjs-2: A React wrapper for Chart.js to create charts in
-
-React components.
-
--- Backend:
-
-∗ Spring Boot: A framework for building Java-based web applications with built-in support for embedded servers and RESTful
-
-services.
-
-∗ Spring Data JPA: Provides APIs and implementations for data
-
-access.
-
-∗ Spring Web: Provides features to build web applications, including RESTful applications using Spring MVC.
-
-∗ MySQL Connector/JDBC: A driver that enables Java applications to communicate with MySQL databases.
-
+- **Spring Boot:** A framework for building Java-based web applications with built-in support for embedded servers and RESTful services.
+- **Spring Data JPA:** Provides APIs and implementations for data access.
+- **Spring Web:** Provides features to build web applications, including RESTful applications using Spring MVC.
+- **MySQL Connector/JDBC:** A driver that enables Java applications to communicate with MySQL databases.
 
 ## Setup Instructions
 
