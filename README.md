@@ -20,6 +20,16 @@ The Water Quality Monitoring (WQM) platform is designed to raise awareness about
 
 The WQM platform supports Sustainable Development Goal 6 (SDG 6) by providing tools and resources to improve water quality and promote sustainable water monitoring practices. Through our complaint management system, we address water quality issues promptly, contributing to the goal of ensuring availability and sustainable management of water and sanitation for all.
 
+## System Thinking
+We applied systems thinking to analyze the intricate interactions involved in water quality monitoring. Breaking down the problem into smaller components enabled us to pinpoint crucial areas where intervention and enhancement were needed. 
+Casual Map
+![image](https://github.com/Cap26803/Water-Quality-Monitoring/assets/105357505/e5f1effa-380c-4cf7-a807-807c8b146a3c)
+Behaviour Over Time [BoT]
+![image](https://github.com/Cap26803/Water-Quality-Monitoring/assets/105357505/c91e77ab-b31e-4870-943e-bb53ef092753)
+Feedback Loops:
+![image](https://github.com/Cap26803/Water-Quality-Monitoring/assets/105357505/d294e465-0678-4b65-8937-41e76b930d11)
+![image](https://github.com/Cap26803/Water-Quality-Monitoring/assets/105357505/5f5c27a0-337f-49f3-9b46-0fa20e7765b7)
+
 ## Setup Instructions
 
 ### Prerequisites
